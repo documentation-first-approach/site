@@ -1,0 +1,210 @@
+{
+  "nav": {
+    "foundations": "Fundamentos",
+    "why": "Por quê",
+    "method": "Método",
+    "tooling": "Ferramentas",
+    "gettingStarted": "Começar",
+    "download": "Download"
+  },
+  "hero": {
+    "badge": "novidades na v3.0.0",
+    "title": "Documentation-First Approach",
+    "subtitle": "Documentation-First inclui ferramentas para construir especificações determinísticas que a IA pode implementar corretamente, de qualquer plataforma, usando Claude, GPT, Gemini e outros.",
+    "cta": {
+      "install": "instalar e usar",
+      "docs": "ler docs",
+      "demo": "assistir demo (5min)"
+    },
+    "metrics": {
+      "hallucinations": "menos alucinações",
+      "rework": "menos retrabalho",
+      "coverage": "cobertura de testes",
+      "error": "taxa de erro"
+    }
+  },
+  "footer": {
+    "brand": {
+      "name": "DFA",
+      "tagline": "desenvolvimento determinístico assistido por IA"
+    },
+    "navigate": {
+      "title": "navegar",
+      "docs": "docs",
+      "download": "download",
+      "method": "método"
+    },
+    "resources": {
+      "title": "recursos",
+      "github": "github",
+      "foundations": "fundamentos",
+      "tooling": "ferramentas"
+    },
+    "copyright": "© 2025",
+    "license": "Licença MIT",
+    "createdBy": "criado por",
+    "author": "Cleber de Moraes Goncalves"
+  },
+  "gettingStarted": {
+    "title": "Começando",
+    "subtitle": "Fique pronto em apenas 5 minutos",
+    "meta": {
+      "time": "⏱️ Tempo até primeira feature: ~5 minutos",
+      "setup": "📦 Sem setup complexo necessário",
+      "works": "🚀 Funciona com seu projeto existente"
+    },
+    "prerequisites": {
+      "title": "Pré-requisitos",
+      "items": {
+        "cli": {
+          "title": "Claude Code CLI instalado",
+          "detail": "npm install -g @anthropic/claude-code"
+        },
+        "apiKey": {
+          "title": "API Key da Anthropic",
+          "detail": "https://console.anthropic.com"
+        },
+        "git": {
+          "title": "Repositório Git",
+          "detail": "Projeto existente ou novo"
+        },
+        "stack": {
+          "title": "Sua linguagem/framework preferido",
+          "detail": "Funciona com qualquer stack"
+        }
+      }
+    },
+    "quickStart": {
+      "title": "Quick start: 3 passos",
+      "step1": {
+        "title": "Baixe o scaffold",
+        "description": "Baixe o pacote .claude/ que funciona com qualquer linguagem",
+        "cta": "ir para página de download →",
+        "check": "✅ Você deve ter agora um diretório .claude/",
+        "markComplete": "Marcar como finalizado"
+      },
+      "step2": {
+        "title": "Configure seu projeto",
+        "description": "Extraia e copie para seu projeto, customize a constitution",
+        "check": "✅ Setup completo! Pronto para criar sua primeira feature"
+      },
+      "step3": {
+        "title": "Crie sua primeira feature",
+        "description": "Use os commands /vision e /feature para começar a construir",
+        "substep1": "3.1. Inicie o Claude Code:",
+        "substep2": "3.2. Defina sua visão (se projeto novo):",
+        "substep3": "3.3. Crie sua primeira feature:",
+        "substep4": "3.4. Implemente a feature:",
+        "substep5": "3.5. Revise o código gerado:",
+        "celebration": "🎉 Parabéns!",
+        "celebrationText": "Você acabou de criar sua primeira feature usando a Documentation-First Approach!"
+      },
+      "complete": "✓ Finalizado"
+    },
+    "commands": {
+      "title": "Cheat sheet de commands",
+      "subtitle": "commands essenciais para começar",
+      "viewAll": "ver todos os 15 commands →",
+      "list": {
+        "vision": "Define visão, objetivos e stakeholders do projeto",
+        "stack": "Define tech stack e constraints",
+        "feature": "Cria scenarios BDD para novas features",
+        "code": "Implementa código a partir das especificações",
+        "actor": "Documenta um ator/sistema externo",
+        "container": "Documenta um building block de alto nível",
+        "component": "Documenta um módulo de código",
+        "rule": "Cria/atualiza uma quality rule",
+        "adr": "Registra uma decisão arquitetural"
+      }
+    },
+    "troubleshooting": {
+      "title": "Solução de problemas",
+      "items": {
+        "commands": {
+          "question": "Claude não reconhece os commands",
+          "solution": "Garanta que CLAUDE.md está na raiz do projeto e o diretório .claude/ existe. Reinicie o Claude Code CLI."
+        },
+        "style": {
+          "question": "Código gerado não combina com meu estilo",
+          "solution": "Customize .claude/rules/ com seus padrões de código e atualize constitution.md com seus princípios."
+        },
+        "tests": {
+          "question": "Testes estão falhando após implementação",
+          "solution": "Verifique cenários BDD na spec. Garanta que o framework de testes está configurado corretamente. Execute o orchestrator para quebrar em tarefas menores."
+        },
+        "specs": {
+          "question": "Specs estão muito verbosas / não detalhadas o suficiente",
+          "solution": "Ajuste complexidade em constitution.md: LOW = capítulos mínimos (apenas 6, 10), MEDIUM = padrão (3, 5, 6, 8, 9, 10), HIGH = todos os 12 capítulos Arc42."
+        },
+        "migration": {
+          "question": "Como migro um projeto existente?",
+          "solution": "Comece com /vision para documentar o sistema existente. Use /container para documentar cada componente principal. Refatore gradualmente usando documentation-first. Veja receita: \"Migrating Legacy Code\"."
+        }
+      }
+    },
+    "whatsNext": {
+      "title": "O que vem depois?",
+      "items": {
+        "foundations": {
+          "title": "Aprender fundamentos",
+          "description": "Entenda os frameworks Arc42, C4, BDD e ADR",
+          "cta": "ler documentação →"
+        },
+        "tooling": {
+          "title": "Explorar ferramentas",
+          "description": "15 commands, 9 agents, 39 quality rules",
+          "cta": "ver ferramentas →"
+        },
+        "community": {
+          "title": "Entrar na comunidade",
+          "description": "Discord, fórum e contribuições",
+          "comingSoon": "em breve"
+        },
+        "tutorials": {
+          "title": "Tutoriais",
+          "description": "Construa um app TODO, checkout de e-commerce e muito mais",
+          "comingSoon": "em breve"
+        },
+        "recipes": {
+          "title": "Receitas",
+          "description": "Como migrar código legado, integrar desenvolvedores e melhores práticas",
+          "comingSoon": "em breve"
+        },
+        "research": {
+          "title": "Pesquisa & Dados",
+          "description": "Benchmarks, estudos de caso e artigos",
+          "comingSoon": "em breve"
+        }
+      }
+    },
+    "cta": {
+      "foundations": {
+        "title": "Aprender os fundamentos →",
+        "description": "Entenda Arc42, C4, BDD e ADR - os frameworks que tornam a abordagem determinística"
+      },
+      "method": {
+        "title": "Ver o workflow completo →",
+        "description": "Descubra o workflow de 7 fases e como o task decomposition previne alucinações"
+      }
+    },
+    "progress": {
+      "title": "Seu progresso",
+      "reset": "resetar",
+      "steps": "steps",
+      "complete": "🎉 Tudo pronto!",
+      "completeMessage": "Pronto para começar a construir com Documentation-First",
+      "step1": {
+        "title": "Baixar scaffold",
+        "description": "Obter o diretório .claude/"
+      },
+      "step2": {
+        "title": "Configurar projeto",
+        "description": "Copiar arquivos e configurar"
+      },
+      "step3": {
+        "title": "Criar primeira feature",
+        "description": "Executar /vision e /feature"
+      }
+    }
+  }
+}
