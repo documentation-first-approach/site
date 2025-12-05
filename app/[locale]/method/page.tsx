@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { FileText } from 'lucide-react';
 import { useLocale } from 'next-intl';
 
@@ -1401,7 +1402,7 @@ export default function MethodPage() {
           {/* CTAs */}
           <div className="mt-32">
             <div className="grid md:grid-cols-2 gap-6">
-              <a
+              <Link
                 href="/tooling"
                 className="block border border-neutral-800 p-6 hover:border-white transition-colors group"
               >
@@ -1411,9 +1412,9 @@ export default function MethodPage() {
                 <p className="text-sm font-mono text-neutral-500">
                   {t.ctas.tooling.description}
                 </p>
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="/download"
                 className="block border border-neutral-800 p-6 hover:border-white transition-colors group"
               >
@@ -1423,7 +1424,7 @@ export default function MethodPage() {
                 <p className="text-sm font-mono text-neutral-500">
                   {t.ctas.download.description}
                 </p>
-              </a>
+              </Link>
             </div>
           </div>
 

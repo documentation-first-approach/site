@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { Download, Github } from 'lucide-react';
 import { useLocale } from 'next-intl';
 
@@ -585,7 +586,7 @@ export default function DownloadPage() {
           {/* CTAs */}
           <div className="mt-32">
             <div className="grid md:grid-cols-2 gap-6">
-              <a
+              <Link
                 href="/getting-started"
                 className="block border border-neutral-800 p-6 hover:border-white transition-colors group"
               >
@@ -595,9 +596,9 @@ export default function DownloadPage() {
                 <p className="text-sm font-mono text-neutral-500">
                   {t.ctas.getStarted.description}
                 </p>
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="/why"
                 className="block border border-neutral-800 p-6 hover:border-white transition-colors group"
               >
@@ -607,7 +608,7 @@ export default function DownloadPage() {
                 <p className="text-sm font-mono text-neutral-500">
                   {t.ctas.why.description}
                 </p>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

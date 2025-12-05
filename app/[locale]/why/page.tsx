@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { FileText, TrendingDown, Brain, AlertTriangle } from 'lucide-react';
 import { useLocale } from 'next-intl';
 
@@ -1032,7 +1033,7 @@ export default function WhyPage() {
 
             {/* CTAs */}
             <div className="grid md:grid-cols-2 gap-6">
-              <a
+              <Link
                 href="/download"
                 className="block border border-neutral-800 p-6 hover:border-white transition-colors group"
               >
@@ -1042,9 +1043,9 @@ export default function WhyPage() {
                 <p className="text-sm font-mono text-neutral-500">
                   {t.ctas.download.description}
                 </p>
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="/method"
                 className="block border border-neutral-800 p-6 hover:border-white transition-colors group"
               >
@@ -1054,7 +1055,7 @@ export default function WhyPage() {
                 <p className="text-sm font-mono text-neutral-500">
                   {t.ctas.method.description}
                 </p>
-              </a>
+              </Link>
             </div>
           </div>
 

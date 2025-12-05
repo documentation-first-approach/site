@@ -5,20 +5,18 @@ import Link from 'next/link';
 import { CheckCircle2, Circle, Terminal, Key, GitBranch, Code2, AlertCircle, Settings, TestTube, FileText, FolderGit, BookOpen, Wrench, Users, GraduationCap, BookText, BarChart } from 'lucide-react';
 
 export default function GettingStartedPage() {
-  const [completedSteps, setCompletedSteps] = useState<number[]>([]);
-
-  // Load progress from localStorage on mount
-  useEffect(() => {
+  const [completedSteps, setCompletedSteps] = useState<number[]>(() => {
+    if (typeof window === 'undefined') return [];
     const saved = localStorage.getItem('getting-started-progress');
-    if (saved) {
-      setCompletedSteps(JSON.parse(saved));
-    }
-  }, []);
+    return saved ? JSON.parse(saved) : [];
+  });
 
   // Save progress to localStorage whenever it changes
   useEffect(() => {
     if (completedSteps.length > 0) {
       localStorage.setItem('getting-started-progress', JSON.stringify(completedSteps));
+    } else {
+      localStorage.removeItem('getting-started-progress');
     }
   }, [completedSteps]);
 
@@ -531,7 +529,7 @@ Claude: [Reads spec, generates tasks, implements]
           {/* CTAs */}
           <div className="mt-32">
             <div className="grid md:grid-cols-2 gap-6">
-              <a
+              <Link
                 href="/foundations"
                 className="block border border-neutral-800 p-6 hover:border-white transition-colors group"
               >
@@ -541,9 +539,9 @@ Claude: [Reads spec, generates tasks, implements]
                 <p className="text-sm font-mono text-neutral-500">
                   Entenda Arc42, C4, BDD e ADR - os frameworks que tornam a abordagem determinística
                 </p>
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="/method"
                 className="block border border-neutral-800 p-6 hover:border-white transition-colors group"
               >
@@ -553,7 +551,7 @@ Claude: [Reads spec, generates tasks, implements]
                 <p className="text-sm font-mono text-neutral-500">
                   Descubra o workflow de 7 fases e como o task decomposition previne alucinações
                 </p>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

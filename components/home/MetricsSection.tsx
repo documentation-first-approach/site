@@ -1,27 +1,4 @@
 export function MetricsSection() {
-  const aiMetrics = [
-    {
-      value: '85%',
-      label: 'menos alucinações',
-      description: 'Redução de 60.4% para 0.9% em taxa de alucinação'
-    },
-    {
-      value: '78%',
-      label: 'menos retrabalho',
-      description: 'Código correto na primeira tentativa'
-    },
-    {
-      value: '80%+',
-      label: 'cobertura de testes',
-      description: 'Garantida automaticamente em toda feature'
-    },
-    {
-      value: '<10%',
-      label: 'taxa de erro',
-      description: 'Output determinístico e previsível'
-    },
-  ];
-
   const organizationalMetrics = [
     {
       metric: 'Horas semanais em reuniões por desenvolvedor',

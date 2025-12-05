@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import { Download, BookOpen, Play } from 'lucide-react';
 import { useTranslations } from 'next-intl';
@@ -12,7 +12,7 @@ export function HeroSection() {
   const [currentCharIndex, setCurrentCharIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
 
-  const lines = [
+  const lines = useMemo(() => [
     { text: '$ /feature user can create a task with title', delay: 50, color: 'input' },
     { text: '→ analyzing requirement...', delay: 30, color: 'neutral-600' },
     { text: '→ complexity: LOW', delay: 30, color: 'neutral-600', highlight: 'LOW' },
@@ -24,7 +24,7 @@ export function HeroSection() {
     { text: '  ✓ src/task-management/tasks/Task.ts', delay: 20, color: 'neutral-500' },
     { text: '  ✓ tests passing (95% coverage)', delay: 20, color: 'neutral-500' },
     { text: 'done!', delay: 40, color: 'white' },
-  ];
+  ], []);
 
   useEffect(() => {
     if (currentLineIndex >= lines.length) {
@@ -58,7 +58,7 @@ export function HeroSection() {
       }, 200);
       return () => clearTimeout(timeout);
     }
-  }, [currentLineIndex, currentCharIndex, isTyping, terminalLines]);
+  }, [currentLineIndex, currentCharIndex, isTyping, terminalLines, lines]);
 
   const renderLine = (text: string, index: number) => {
     const line = lines.find(l => l.text === text);

@@ -24,13 +24,13 @@ export default async function LocaleLayout({
   params
 }: Readonly<{
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale: Locale }>;
 }>) {
   // Await params (Next.js 15+ requirement)
   const { locale } = await params;
 
   // Ensure that the incoming `locale` is valid
-  if (!locales.includes(locale as any)) {
+  if (!locales.includes(locale)) {
     notFound();
   }
 
